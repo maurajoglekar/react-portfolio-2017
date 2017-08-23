@@ -4,7 +4,7 @@ import Home from './Home'
 import Test from './Test'
 
 const Main = () => (
-  <main>
+  <main className="content">
     <Switch>
       <Route exact path='/' component={Home}/>
       <Route exact path='/test' component={Test}/>

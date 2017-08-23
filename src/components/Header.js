@@ -1,14 +1,17 @@
 import React from 'react';
-import {Link } from 'react-router-dom'
+import {NavLink } from 'react-router-dom'
+import './App.css';
 
 const Header = () => (
   <header>
-    <nav>
-      <ul>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/test'>Test</Link></li>
+    <h1>Maura's React Application </h1>
+    <nav>     
+      <ul className="header">
+        <li><NavLink to='/' exact activeClassName="active">Home</NavLink></li>
+        <li><NavLink to='/test' activeClassName="active">Test</NavLink></li>
       </ul>
     </nav>
+
   </header>
 )
 
