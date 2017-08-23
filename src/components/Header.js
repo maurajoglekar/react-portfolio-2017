@@ -4,14 +4,15 @@ import './App.css';
 
 const Header = () => (
   <header>
-    <h1>Maura's React Application </h1>
+    <h1>React Routing Application </h1>
     <nav>     
       <ul className="header">
         <li><NavLink to='/' exact activeClassName="active">Home</NavLink></li>
-        <li><NavLink to='/test' activeClassName="active">Test</NavLink></li>
-      </ul>
+        <li><NavLink to='/counter' activeClassName="active">Counter</NavLink></li>
+        <li><NavLink to='/colorizer' activeClassName="active">Colorizer</NavLink></li>
+        <li><NavLink to='/todo' activeClassName="active">To Do List</NavLink></li>
+     </ul>
     </nav>
-
   </header>
 )
 

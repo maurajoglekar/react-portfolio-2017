@@ -3,11 +3,10 @@ import './App.css';
 
 const Home = () => (
             <div>
-              <h2>HELLO</h2>
+              <h2>Welcome!!</h2>
               <p>This ReactJS application has the following pages: </p>
               <ul>
-              <li>Cars - A list of cars which navigates to the car details</li>
-              <li>Counter - Click and add a counter </li>
+              <li>Counter - Click to increase the counter </li>
               <li>Colorizer - Color a square </li>
               <li>To Do List - Create a todo list </li>
               </ul>
