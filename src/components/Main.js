@@ -4,6 +4,7 @@ import Home from './Home'
 import Colorizer from './Colorizer'
 import CounterParent from './CounterParent'
 import ToDoList from './ToDoList'
+import Board from './bulletin-board/Board'
 
 const Main = () => (
   <main className="content">
@@ -12,6 +13,7 @@ const Main = () => (
       <Route exact path='/colorizer' component={Colorizer}/>
       <Route exact path='/counter' component={CounterParent}/>
       <Route exact path='/todo' component={ToDoList}/>
+      <Route exact path='/board' component={Board}/>
     </Switch>
   </main>
 )

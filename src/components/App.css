@@ -8,12 +8,17 @@ h1 {
   font-weight: normal;
 
 }
-h2, p, ul{
+h2, p, li{
   font-family: Helvetica, Arial, sans-serif;
 }
 
-li {
-    list-style: none;
+.homeList li {
+  list-style: none;
+
+}
+
+a:link {
+    text-decoration: none;
 }
 
 ul.header li {
@@ -40,11 +45,7 @@ ul.header li a {
   padding: 0;
   margin: 0;
 }
-/*
-.content li {
-  margin-bottom: 10px;
-}
-*/
+
 .active {
   background-color: #DEB887;
 }
