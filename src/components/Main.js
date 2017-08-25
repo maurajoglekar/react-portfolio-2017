@@ -5,7 +5,7 @@ import Colorizer from './colorizer/Colorizer'
 import CounterParent from './counter/CounterParent'
 import ToDoList from './to-do-list/ToDoList'
 import Board from './bulletin-board/Board'
-import CarsRoute from './cars-details/CarsRoute'
+import Cars from './cars-details/Cars'
 import CarsDetails from './cars-details/CarsDetails'
 
 const Main = () => (
@@ -16,8 +16,8 @@ const Main = () => (
       <Route exact path='/counter' component={CounterParent}/>
       <Route exact path='/todo' component={ToDoList}/>
       <Route exact path='/board' component={Board}/>
-      <Route exact path='/cars' component={CarsRoute}/>
-      <Route path='/cars/:number' component={CarsDetails}/>
+      <Route exact path='/cars' component={Cars}/>
+      <Route path='/cars/:id' component={CarsDetails}/>
     </Switch>
   </main>
 )

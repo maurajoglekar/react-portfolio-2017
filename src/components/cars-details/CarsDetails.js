@@ -1,20 +1,38 @@
 import React from 'react';
 import { NavLink} from 'react-router-dom'
-import PlayerAPI from './PlayerAPI'
+import CarsAPI from './CarsAPI'
 
 const CarsDetails = (props) => {
-  const player = PlayerAPI.get(
-    parseInt(props.match.params.number, 10)
+  const car = CarsAPI.get(
+    parseInt(props.match.params.id, 10)
   )
-  if (!player) {
-    return <div>Sorry, but the player was not found</div>
+  if (!car) {
+    return <div>Sorry, but the car was not found</div>
   }
+  
+  
   return (
-    <div>
-      <h1>{player.name} (#{player.number})</h1>
-      <h2>Position: {player.position}</h2>
-      <NavLink to='/cars'>Back</NavLink>
-    </div>
+        <div>
+            <h2>{car.name}</h2>
+            <div className="row">
+                <div className="col-sm-6 col-md-4">
+                    <div className="thumbnail">
+                        <img src={car.media} alt={car.name} />
+                    </div>
+                </div>
+                <div className="col-sm-6 col-md-4">
+                   <ul>
+                       <li><strong>Model</strong>: {car.model}</li>
+                       <li><strong>Make</strong>: {car.make}</li>
+                       <li><strong>Year</strong>: {car.year}</li>
+                       <li><strong>Price</strong>: {car.price}</li>
+                   </ul>
+                </div>
+            </div>
+            
+            
+            <NavLink className="button" to='/cars'>Back To Cars</NavLink>
+        </div>
   )
 }
 
