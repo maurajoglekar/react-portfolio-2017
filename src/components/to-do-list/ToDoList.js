@@ -1,6 +1,6 @@
 import React from 'react';
 import TodoItems from './ToDoItems'
-import './App.css';
+import '../App.css';
 import './ToDoList.css'
  
 const ToDoList = React.createClass({

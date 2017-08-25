@@ -12,7 +12,7 @@ const Home = () => (
             <li><NavLink to='/colorizer'>Colorizer - Color a square </NavLink></li>
             <li><NavLink to='/todo'>To Do List - Create a todo list</NavLink></li>
         </ul>
-        <h4>from <i>Learning React.js</i> by Eve Porcello on Lynda.com </h4>
+        <h4>from <i>Learning React.js</i> by Eve Porcello at Lynda.com </h4>
         <ul className="homeList">
             <li><NavLink to='/board'>Bulletin Board that enables you to add notes to a board</NavLink></li>
         </ul>
