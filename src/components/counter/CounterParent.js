@@ -1,8 +1,9 @@
 import React from 'react';
+import createReactClass from 'create-react-class';
 import '../App.css';
 import Counter from './Counter'
 
-const CounterParent = React.createClass({
+const CounterParent = createReactClass({
         getInitialState: function() {
             return {
               count: 0

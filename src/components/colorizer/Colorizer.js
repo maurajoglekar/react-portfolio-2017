@@ -1,8 +1,9 @@
 import React from 'react';
+import createReactClass from 'create-react-class';
 import '../App.css';
 import './Colorizer.css'
 
-var Colorizer = React.createClass({
+var Colorizer = createReactClass({
         getInitialState: function() {
           return {
               color: '',
