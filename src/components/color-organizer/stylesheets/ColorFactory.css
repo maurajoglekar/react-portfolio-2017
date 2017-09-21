@@ -1,0 +1,20 @@
+html, body, div#root {
+	min-height: 100%;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+}
+
+
+body div.app {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+input {
+	outline: none;
+}
+

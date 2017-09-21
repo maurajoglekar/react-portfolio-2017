@@ -11,6 +11,7 @@ const Header = () => (
         <li><NavLink to='/counter' activeClassName="active">Counter</NavLink></li>
         <li><NavLink to='/colorizer' activeClassName="active">Colorizer</NavLink></li>
         <li><NavLink to='/todo' activeClassName="active">To Do List</NavLink></li>
+        <li><NavLink to='/colorfactory' activeClassName="active">Color Factory</NavLink></li>
         <li><NavLink to='/cars' activeClassName="active">Cars</NavLink></li>
      </ul>
     </nav>
