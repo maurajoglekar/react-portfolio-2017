@@ -3,7 +3,7 @@ import '../App.css';
 import './Board.css'
 import Draggable from 'react-draggable'
   
-var Note = React.createClass({
+const Note = React.createClass({
             getInitialState() {
                 return {editing: false}
             },

@@ -1,9 +1,10 @@
 import React from 'react';
+import createReactClass from 'create-react-class';
 import TodoItems from './ToDoItems'
 import '../App.css';
 import './ToDoList.css'
  
-const ToDoList = React.createClass({
+const ToDoList = createReactClass({
       getInitialState: function() {
         return {
           tasks: []
@@ -11,14 +12,15 @@ const ToDoList = React.createClass({
       },
       addItem: function(e) {
           var itemArray = this.state.tasks;
-
-          itemArray.push(
-            {
-              text: this._inputElement.value,
-              key: Date.now()
-            }
-          );
-
+          var newtask = this._inputElement.value;
+          if (newtask.length > 0) {
+              itemArray.push(
+                {
+                  text: newtask,
+                  key: Date.now()
+                }
+              );
+          }
           this.setState({
             tasks: itemArray
           });
@@ -27,6 +29,10 @@ const ToDoList = React.createClass({
           
           e.preventDefault();
       },
+      remove(id) {
+            var tasks = this.state.tasks.filter(task => task.key !== id)
+            this.setState({tasks})
+        },
       render: function() {
           return (
             <div className="todoListBody">
@@ -39,7 +45,7 @@ const ToDoList = React.createClass({
                 </form>
               </div>
             </div>
-            <TodoItems entries={this.state.tasks}/>
+            <TodoItems entries={this.state.tasks} onRemove={this.remove}/>
             </div>
           );
         }

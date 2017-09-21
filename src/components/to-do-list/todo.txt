@@ -1,0 +1,111 @@
+import React from 'react';
+import '../App.css';
+import './ToDoList.css'
+
+const ToDoItems = () => ({
+      render: function() {
+        var todoEntries = this.props.entries;
+
+        function createTasks(item) {
+          return <li key={item.key}>{item.text}</li>
+        }
+
+        var listItems = todoEntries.map(createTasks);
+        
+        return (
+          <ul className="theList">
+            {listItems}
+          </ul>
+        );        
+      }
+    });
+
+export default ToDoItems;/* To Do List styling */
+
+    .todoListBody {
+      padding: 50px;
+      background-color: #66CCFF;
+      font-family: sans-serif;
+    }
+    
+    .todoListMain .header input {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #FFF;
+    }
+    .todoListMain .header button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px;
+      background-color: #0066FF;
+      color: #FFF;
+      border: 2px solid #0066FF;
+    }
+
+    .todoListMain .header button:hover {
+      background-color: #003399;
+      border: 2px solid #003399;
+      cursor: pointer;
+    }
+
+    ul.theList {
+      list-style: none;
+      padding-left: 0;
+      width: 255px;
+    }
+
+    ul.theList li {
+      color: #333;
+      background-color: rgba(255,255,255,.5);
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+import React from 'react';
+import TodoItems from './ToDoItems'
+import '../App.css';
+import './ToDoList.css'
+ 
+const ToDoList = React.createClass({
+      getInitialState: function() {
+        return {
+          tasks: []
+        };
+      },
+      addItem: function(e) {
+          var itemArray = this.state.tasks;
+
+          itemArray.push(
+            {
+              text: this._inputElement.value,
+              key: Date.now()
+            }
+          );
+
+          this.setState({
+            tasks: itemArray
+          });
+
+          this._inputElement.value = "";
+          
+          e.preventDefault();
+      },
+      render: function() {
+          return (
+            <div className="todoListBody">
+            <div className="todoListMain">
+              <div className="header">
+                <form onSubmit={this.addItem}>
+                  <input ref={(a) => this._inputElement = a} placeholder="Enter task">
+                  </input>
+                  <button type="submit">add</button>
+                </form>
+              </div>
+            </div>
+            <TodoItems entries={this.state.tasks}/>
+            </div>
+          );
+        }
+    });
+
+export default ToDoList
