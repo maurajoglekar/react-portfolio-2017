@@ -7,7 +7,7 @@ const App = () => (
   <div>
     <Header />
     <Main />
-  </div>
+ </div>
 )
 
 export default App;
