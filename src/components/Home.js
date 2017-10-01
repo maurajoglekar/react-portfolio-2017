@@ -34,7 +34,7 @@ const Home = () => (
     <div className="col-sm-4">
       <div className="thumbnail">
         <h3>Post-Its Board</h3>
-        <NavLink to='/board'><img src={postits} alt="To Do List" width="300" height="300" /></NavLink>        
+        <NavLink to='/todo'><img src={postits} alt="To Do List" width="300" height="300" /></NavLink>        
       </div>      
     </div>
 
