@@ -7,7 +7,7 @@ var Header = createReactClass({
          render: function() {
           var headerStyle = {
             fontSize: 18
-          };
+        };
           return (
               <header>
               <div className="header"> 

@@ -76,25 +76,11 @@ var Board = createReactClass({
                         </Note>)
             },
             render() {
-                return (
-                            <div className="container-fluid"> 
-                               <div className="row">
-                                    <div className="col-sm-4"></div>
-                                    <div className="col-sm-4">
-                                        <div className="btn-group btn-group-justified btn-group-lg">
-                                            <a className="btn btn-primary" onClick={() => this.add('New Note')}>Add A Note</a>
-                                            <a className="btn btn-danger" onClick={() => this.clear()}>Clear All</a>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-4"></div>
-                                </div>
-                                <div className="row">
-                                <div className="col-lg-12 board">
-                                    {this.state.notes.map(this.eachNote)}
-                                </div>
-                                </div>
-                            </div>
-                        )
+                return (<div className='board'>
+                           {this.state.notes.map(this.eachNote)}
+                           <button id="addButton" onClick={() => this.add('New Note')}>Add Note</button>
+                           <button id="clearButton" onClick={() => this.clear()}>Clear All</button>
+                        </div>)
             }
         })
 
