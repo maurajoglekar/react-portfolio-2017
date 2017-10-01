@@ -36,16 +36,16 @@ const ToDoList = createReactClass({
       render: function() {
           return (
             <div className="todoListBody">
-            <div className="todoListMain">
-              <div className="header">
-                <form onSubmit={this.addItem}>
-                  <input ref={(a) => this._inputElement = a} placeholder="Enter task">
-                  </input>
-                  <button type="submit">add</button>
-                </form>
-              </div>
-            </div>
-            <TodoItems entries={this.state.tasks} onRemove={this.remove}/>
+                <div className="todoListMain">
+                  <div className="header">
+                    <form onSubmit={this.addItem}>
+                      <input ref={(a) => this._inputElement = a} placeholder="Enter task">
+                      </input>
+                      <button type="submit">add</button>
+                    </form>
+                  </div>
+                </div>
+                <TodoItems entries={this.state.tasks} onRemove={this.remove}/>
             </div>
           );
         }
