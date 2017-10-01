@@ -26,6 +26,7 @@ var Header = createReactClass({
                         <li><NavLink to='/' exact activeClassName="active">Home</NavLink></li>
                         <li><NavLink to='/colorizer' activeClassName="active">Colorizer</NavLink></li>
                         <li><NavLink to='/todo' activeClassName="active">To Do List</NavLink></li>
+                        <li><NavLink to='/board' activeClassName="active">Bulletin Board</NavLink></li>
                         <li><NavLink to='/colorfactory' activeClassName="active">Color Factory</NavLink></li>
                         <li><NavLink to='/cars' activeClassName="active">Cars</NavLink></li>
                       </ul>
@@ -37,6 +38,5 @@ var Header = createReactClass({
             );
         }
     });
-
 
 export default Header;
