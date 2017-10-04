@@ -1,21 +1,21 @@
 /* Colorizer styling */
-    #container {
-      padding: 50px;
+    .colorizerBody {
+      padding: 20px;
     }
     .colorSquare {
       box-shadow: 0px 0px 25px 0px #333;
-      width: 242px;
+      width: 290px;
       height: 242px;
       margin-bottom: 15px;
     }
     .colorArea input {
       padding: 10px;
-      font-size: 16px;
-      border: 2px solid #CCC;
+      font-size: 18px;
+      border: 2px solid black;
     }
     .colorArea button {
       padding: 10px;
-      font-size: 16px;
+      font-size: 18px;
       margin: 10px;
       background-color: #666;
       color: #FFF;

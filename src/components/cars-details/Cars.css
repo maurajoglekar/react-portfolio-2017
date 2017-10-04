@@ -1,7 +1,7 @@
 /* Car List Styles */
 
 .list-group {
-  background: #EEE8D5;
+  background: #FFF;
   width: 50%;
   min-width: 290px;
   max-width:500px;
@@ -9,6 +9,7 @@
   border-radius: 0 0 20px 20px;
   opacity: .95;
   z-index: 10;
+  padding: 30px;
 }
 
 .list-group ul {

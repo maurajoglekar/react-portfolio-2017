@@ -1,7 +1,6 @@
 import React from 'react';
 import createReactClass from 'create-react-class';
 import TodoItems from './ToDoItems'
-import '../App.css';
 import './ToDoList.css'
  
 const ToDoList = createReactClass({
@@ -33,21 +32,22 @@ const ToDoList = createReactClass({
             var tasks = this.state.tasks.filter(task => task.key !== id)
             this.setState({tasks})
         },
-      render: function() {
+         render: function() {
           return (
-            <div className="todoListBody">
+            <div className="container-fluid todoListBody"> 
                 <div className="todoListMain">
-                  <div className="header">
-                    <form onSubmit={this.addItem}>
-                      <input ref={(a) => this._inputElement = a} placeholder="Enter task">
-                      </input>
-                      <button type="submit">add</button>
-                    </form>
-                  </div>
+                   <form className="form-inline" onSubmit={this.addItem}>
+                    <div className="input-group">
+                      <input ref={(a) => this._inputElement = a} type="text" placeholder="Enter a task" required></input>
+                      <div className="input-group-btn">
+                        <button type="button" className="btn btn-primary">add</button>
+                      </div>
+                    </div>
+                  </form>
                 </div>
                 <TodoItems entries={this.state.tasks} onRemove={this.remove}/>
             </div>
-          );
+          )
         }
     });
 

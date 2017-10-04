@@ -27,6 +27,7 @@ var Colorizer = createReactClass({
           };
 
           return (
+          <div className="container-fluid colorizerBody">
             <div className="colorArea">
               <div style={squareStyle} className="colorSquare"></div>
 
@@ -40,6 +41,7 @@ var Colorizer = createReactClass({
                 </input>
                 <button type="submit">go</button>
               </form>
+            </div>
             </div>
           );
         }
