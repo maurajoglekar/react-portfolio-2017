@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink} from 'react-router-dom'
 import CarsAPI from './CarsAPI'
+import './Cars.css'
 
 const CarsDetails = (props) => {
   const car = CarsAPI.get(
@@ -12,7 +13,7 @@ const CarsDetails = (props) => {
   
   
   return (
-        <div>
+        <div className="container carDetailBody">
             <h2>{car.name}</h2>
             <div className="row">
                 <div className="col-sm-6 col-md-4">
