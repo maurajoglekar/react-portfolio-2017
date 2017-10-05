@@ -1,5 +1,5 @@
 body {
-  background-color: #5F9EA0;
+  background-color: #FFF;
 }
 
 h1 {
@@ -44,6 +44,7 @@ ul.header li a {
 
 .content {
   background-color: #FFF;
+  height: 600px;
 }
 .content h2 {
   padding: 0;

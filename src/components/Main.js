@@ -8,6 +8,10 @@ import ColorFactory from './color-organizer/ColorFactory'
 import Cars from './cars-details/Cars'
 import CarsDetails from './cars-details/CarsDetails'
 import Board from './bb/Board'
+import GHSearchBox from './github-search/GHSearchBox'
+import GHSearchList from './github-search/GHSearchList'
+import GHSearchListContainer from './github-search/GHSearchListContainer'
+import GHSearchDetails from './github-search/GHSearchDetails'
 
 const Main = () => (
   <main className="content">
@@ -20,6 +24,10 @@ const Main = () => (
       <Route exact path='/bb' component={Board}/>
       <Route exact path='/cars' component={Cars}/>
       <Route path='/cars/:id' component={CarsDetails}/>
+      <Route exact path='/ghSearchBox' component={GHSearchBox}/>
+      <Route exact path='/ghSearchListContainer/:searchTerm' component={GHSearchListContainer}/>
+      <Route exact path='/ghSearchList' component={GHSearchList}/>
+      <Route path='/ghSearchDetails/:name' component={GHSearchDetails}/>
     </Switch>
   </main>
 )
