@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink } from 'react-router-dom'
-import color1 from './images/rateColor.jpg'
+import rateColor from './images/rateColor.jpg'
 import color2 from './images/colors2.jpg'
 import todolist from './images/todolist.jpg'
 import cars from './images/cars2.jpg'
@@ -27,14 +27,14 @@ const Home = () => (
         </div>
         <div className="col-sm-4">
           <div className="thumbnail">
-           <h3>Color a square</h3>
-           <NavLink to='/colorizer'><img src={color2} alt="colorizer" width="300" height="300" /></NavLink>
-          </div>      
-       </div>
-        <div className="col-sm-4">
-          <div className="thumbnail">
             <h3>Cars Inventory</h3>
            <NavLink to='/cars'><img src={cars} alt="Cars" width="300" height="300" /></NavLink>
+          </div>      
+        </div>
+        <div className="col-sm-4">
+          <div className="thumbnail">
+            <h3>Post-Its Board</h3>
+            <NavLink to='/bb'><img src={postits} alt="Post-Its Board" width="300" height="300" /></NavLink>        
           </div>      
         </div>
       </div>
@@ -43,7 +43,7 @@ const Home = () => (
          <div className="col-sm-4">
           <div className="thumbnail">
            <h3>Create colors and star rate them</h3>
-            <NavLink to='/colorfactory'><img src={color1} alt="color factory" width="300" height="300" /></NavLink>        
+            <NavLink to='/colorfactory'><img src={rateColor} alt="color factory" width="300" height="300" /></NavLink>        
           </div>      
         </div>
         <div className="col-sm-4">
@@ -54,10 +54,10 @@ const Home = () => (
         </div>
         <div className="col-sm-4">
           <div className="thumbnail">
-            <h3>Post-Its Board</h3>
-            <NavLink to='/bb'><img src={postits} alt="Post-Its Board" width="300" height="300" /></NavLink>        
+           <h3>Color a square</h3>
+           <NavLink to='/colorizer'><img src={color2} alt="colorizer" width="300" height="300" /></NavLink>
           </div>      
-        </div>
+       </div>
       </div>
 
     </div>
