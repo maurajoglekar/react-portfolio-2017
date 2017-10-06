@@ -13,18 +13,18 @@ const GHSearchBox = createReactClass({
             render: function() {
               return (
                <div className="container-fluid searchBody">
-                    <div className="answerinfo">
-                       <h1 className="searchHeader">Git Hub Search</h1>
-                       <form className="form-inline searchForm" id="search" onSubmit={this.doSearch}>
+                    <div className="jumbotron text-center searchJumbo">
+                      <h1 className="searchHeader">Git Hub Search</h1> 
+                      <form onSubmit={this.doSearch}>
                         <div className="input-group">
-                          <input ref={(a) => this._inputElement = a} className="textinput" type="text" placeholder="Enter text" required></input>
+                          <input ref={(a) => this._inputElement = a} type="text" className="form-control searchText" placeholder="Enter text" required></input>
                           <div className="input-group-btn">
-                          <button className="btn btn-primary searchButton" type="submit">Search</button>
+                            <button type="submit" className="btn btn-danger">Search</button>
                           </div>
                         </div>
                       </form>
-                    </div>
-                </div>
+                    </div>      
+               </div>
               )
     }
     });

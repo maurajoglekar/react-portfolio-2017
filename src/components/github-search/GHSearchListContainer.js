@@ -11,16 +11,19 @@ const GHSearchListContainer = createReactClass({
         render: function() {
             return (
                 <div className="container-fluid searchBody">
-                    <div className="answerinfo">
+                    <div className="answerinfo container">
                         <h1 className="searchHeader">Git Hub Search</h1>
-                        <form className="form-inline searchForm"  id="search" >
-                        <div className="input-group">
-                          <input ref={(a) => this._inputElement = a} type="text" className="textinput"></input>
-                          <div className="input-group-btn">
-                           </div>
-                        </div>
-                        </form>
                         
+                           <div className="row">
+                            <div className="col-sm-1">
+                            </div>
+                            <div className="col-sm-8">
+                            <input ref={(a) => this._inputElement = a} type="text" className="textinput"></input>
+                            </div>
+                            <div className="col-sm-3">
+                            </div>
+                          </div>
+                       
                         <GHSearchList searchTerms={this.props.match.params.searchTerm}/>
                     </div>
                 </div>

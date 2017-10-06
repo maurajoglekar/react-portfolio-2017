@@ -11,20 +11,27 @@
 
 h1.searchHeader {
   color: #0F4150;
-  font-size: 40px;
+  font-size: 32px;
   line-height: 100%;
   margin-bottom: 10px;
   text-align: center;
 }
 
+.searchText {
+      font-size: 18px;
+      border: 1px solid black;
+}
+.searchJumbo {
+  font-size: 1.1em;
+  background: #EEE8D5;
+  color: #0F4150;
+}
 .answerinfo {
   font-size: 1.1em;
   line-height: 160%;
   background: #EEE8D5;
   color: #0F4150;
-  width: 90%;
-  min-width: 320px;
-  max-width: 900px;
+  width: 85%;
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -33,16 +40,13 @@ h1.searchHeader {
   z-index: 20;
 }
 
-/* Search box */
-form.searchForm {
-  width:650px;
-  margin:50px auto;
-}
 
 input.textinput {
-  width: 60vw;
+  width: 70vw;
   background: white;
   padding: 5px 15px 3px;
+  font-size: 20px;
+  margin-bottom: 30px;
 }
 
 searchButton {
@@ -58,9 +62,8 @@ searchButton:hover  {
 
 .answerlist {
   background: #EEE8D5;
-  width: 70%;
-  min-width: 290px;
-  max-width:1000px;
+  font-size: 20px;
+  width: 90%;
   margin: 0 auto;
   margin-bottom: 30px;
   border-radius: 0 0 20px 20px;
@@ -94,10 +97,10 @@ searchButton:hover  {
 .answerlist li:hover {
   background: #FDF6E3;
   opacity: 1;
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .answer img {
