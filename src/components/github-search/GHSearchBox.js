@@ -14,8 +14,8 @@ const GHSearchBox = createReactClass({
               return (
                <div className="container-fluid searchBody">
                     <div className="answerinfo">
-                    <h1>Git Hub Search</h1>
-                       <form className="form-inline" id="search" onSubmit={this.doSearch}>
+                       <h1 className="searchHeader">Git Hub Search</h1>
+                       <form className="form-inline searchForm" id="search" onSubmit={this.doSearch}>
                         <div className="input-group">
                           <input ref={(a) => this._inputElement = a} className="textinput" type="text" placeholder="Enter text" required></input>
                           <div className="input-group-btn">

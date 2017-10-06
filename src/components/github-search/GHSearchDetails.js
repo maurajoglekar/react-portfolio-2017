@@ -27,19 +27,19 @@ const GHSearchDetails = createReactClass({
             return (
                 <div className="container-fluid searchBody">
                     <div className="answerinfo">
-                        <h1>{decodeURIComponent (this.props.match.params.name)}</h1>
+                        <h1 className="searchHeader">{decodeURIComponent (this.props.match.params.name)}</h1>
+                        <div>
+                            <ul className="answerlist">
+                                {
+                                    this.state.issues.map(p => (
+                                            <li className="answer cf">
+                                            <p>{p.title}</p>
+                                            </li>
+                                    ))
+                                }
+                            </ul>  
+                        </div>
                     </div>
-                <div>
-                    <ul className="answerlist">
-                        {
-                            this.state.issues.map(p => (
-                                    <li className="answer cf">
-                                    <p>{p.title}</p>
-                                    </li>
-                            ))
-                        }
-                    </ul>  
-                </div>
                 </div>
             )
         }
