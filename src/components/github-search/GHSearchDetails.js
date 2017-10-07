@@ -1,6 +1,5 @@
 import React from 'react';
 import createReactClass from 'create-react-class';
-import { NavLink} from 'react-router-dom'
 import './github.css'
  
 const GHSearchDetails = createReactClass({
@@ -27,13 +26,13 @@ const GHSearchDetails = createReactClass({
             return (
                 <div className="container-fluid searchBody">
                     <div className="answerinfo">
-                        <h1 className="searchHeader">{decodeURIComponent (this.props.match.params.name)}</h1>
+                        <h1 className="searchHeader">{decodeURIComponent (this.props.match.params.name)} Issues</h1>
                         <div>
                             <ul className="answerlist">
                                 {
                                     this.state.issues.map(p => (
                                             <li className="answer cf">
-                                            <p>{p.title}</p>
+                                                 <input type="checkbox" checked={(p.state==='open')}></input>{p.title}
                                             </li>
                                     ))
                                 }

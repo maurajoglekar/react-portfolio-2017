@@ -59,13 +59,13 @@ class ColorFactory extends Component {
 
     addColor(title, color) {
         const colors = [
-            ...this.state.colors,
             {
                 id: v4(),
                 title,
                 color,
                 rating: 0
-            }
+            },
+            ...this.state.colors
         ]
         this.setState({colors})
     }

@@ -1,6 +1,5 @@
 import React from 'react';
 import createReactClass from 'create-react-class';
-import { NavLink} from 'react-router-dom'
 import './github.css'
  
 const GHSearchBox = createReactClass({

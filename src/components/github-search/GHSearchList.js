@@ -33,7 +33,10 @@ const GHSearchList = createReactClass({
                         {
                             this.state.answers.map(p => (
                               <li className="answer cf" key={p.id}>
-                                <NavLink to={`/ghSearchDetails/${encodeURIComponent(p.full_name)}`}>{p.full_name}</NavLink>
+                                <NavLink to={`/ghSearchDetails/${encodeURIComponent(p.full_name)}`}>
+                                    <h3>{p.full_name}</h3>
+                                    <h4>{p.description}</h4>
+                                </NavLink>
                               </li>
                             ))
                         }
