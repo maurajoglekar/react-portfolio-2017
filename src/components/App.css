@@ -2,12 +2,7 @@ body {
   background-color: #FFF;
 }
 
-h1 {
-  color: #EEE8D5;
-  font-family: 'Bree Serif', serif;
-  font-weight: normal;
 
-}
 h2, p, li{
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -29,3 +24,41 @@ a:link {
   padding: 0;
   margin: 0;
 }
+
+  .bg-1 { 
+      background-color: #663399; /* Purple */
+      color: #ffffff;
+        padding-top: 30px;
+        padding-bottom: 70px;
+  }
+  .bg-2 { 
+      background-color: #C0C0C0; /* gray */
+      color: black;
+        padding-top: 50px;
+        padding-bottom: 70px;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+        padding-top: 40px;
+        padding-bottom: 70px;
+      color: black;
+  }
+  .bg-4 { 
+      background-color: #2f2f2f; /* Black Gray */
+      color: #fff;
+  }
+  
+  .whatPara {
+      font-size: 26px;
+  }
+  
+  .margin {
+      font-size: 32px;
+   }
+   
+   .padTitle {
+        padding-top: 10px;
+        padding-bottom: 30px;
+   }
+   
+ 

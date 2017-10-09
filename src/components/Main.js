@@ -12,6 +12,8 @@ import GHSearchBox from './github-search/GHSearchBox'
 import GHSearchList from './github-search/GHSearchList'
 import GHSearchListContainer from './github-search/GHSearchListContainer'
 import GHSearchDetails from './github-search/GHSearchDetails'
+import AboutMe from './AboutMe'
+import Contact from './Contact'
 
 const Main = () => (
   <main className="content">
@@ -28,6 +30,8 @@ const Main = () => (
       <Route exact path='/ghSearchListContainer/:searchTerm' component={GHSearchListContainer}/>
       <Route exact path='/ghSearchList' component={GHSearchList}/>
       <Route path='/ghSearchDetails/:name' component={GHSearchDetails}/>
+      <Route path='/aboutme' component={AboutMe}/>
+      <Route path='/contact' component={Contact}/>
     </Switch>
   </main>
 )
