@@ -55,7 +55,7 @@ const AboutMe = () => ({
                   <div className="item">
                     <img src={stanford} alt="Stanford University" width="100%" />
                     <div className="carousel-caption">
-                      <h2>Moved to California to attend Stanford University for my post-graduate degree.</h2>
+                      <h2>Moved to California to attend Stanford University</h2>
                     </div>
                   </div>
 
