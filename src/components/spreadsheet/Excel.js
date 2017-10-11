@@ -32,16 +32,39 @@ const Excel = createReactClass({
               descending: descending
             });
         },    
+        showEditor: function(e) {
+          this.setState({edit: {
+            row: parseInt(e.target.dataset.row, 10),
+            cell: e.target.cellIndex,
+          }});
+        },
+        
+        save: function(e) {
+          e.preventDefault();
+          var input = e.target.firstChild;
+          var data = this.state.books.slice();
+          data[this.state.edit.row][this.state.edit.cell] = input.value;
+          this.setState({
+            edit: null,
+            books: data,
+          });
+        },
         render: function() {
+            const { save } = this
             
-          var headerStyle = {
-            padding: 50,
-            backgroundColor: "#EEE8D5",
-            fontWeight: "bold",
-            fontSize: "21"
-          };
-          var headers = BooksAPI.allHeaders();
-          return (
+            const headerStyle = {
+                padding: 50,
+                backgroundColor: "#EEE8D5",
+                fontWeight: "bold",
+                fontSize: "21"
+            };
+            const bodyStyle = {
+                padding: 50,
+                fontSize: "18"
+            };
+            const headers = BooksAPI.allHeaders();
+            
+            return (
                 <div className="container">
                   <div className="page-header">
                     <h1>Books Spreadsheet</h1>      
@@ -56,11 +79,15 @@ const Excel = createReactClass({
                       }
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody onDoubleClick={this.showEditor} style={bodyStyle}>
                       {
                         this.state.books.map((book, i) => (
-                                <Book key={i} book={book}></Book> 
-                        ))
+                                <Book key={i}
+                                    rowidx={i}
+                                    book={book} 
+                                    edit={this.state.edit}
+                                    onSave={save}></Book> 
+                        ), this)
                       }
                     </tbody>
                   </table>
