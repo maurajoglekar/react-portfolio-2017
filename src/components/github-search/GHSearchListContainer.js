@@ -13,15 +13,13 @@ const GHSearchListContainer = createReactClass({
                     <div className="answerinfo container">
                         <h1 className="searchHeader">Git Hub Search</h1>
                         
-                           <div className="row">
-                            <div className="col-sm-1">
-                            </div>
-                            <div className="col-sm-8">
-                            <input ref={(a) => this._inputElement = a} type="text" className="textinput"></input>
-                            </div>
-                            <div className="col-sm-3">
-                            </div>
-                          </div>
+                  <form className="form-horizontal" onSubmit={this.doSearch}>
+                    <div className="form-group">
+                      <div className="col-sm-12">          
+                      <input ref={(a) => this._inputElement = a} type="text" className="form-control searchText" placeholder="Enter text" readonly></input>
+                      </div>
+                    </div>
+                   </form>                      
                        
                         <GHSearchList searchTerms={this.props.match.params.searchTerm}/>
                     </div>

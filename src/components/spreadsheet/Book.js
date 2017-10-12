@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types'
 
 const Book = ({ rowidx=0, book=[], edit=[], onSave=f=>f }) => ({
-      render: function() {
-          
+      render: function() {          
           return (<tr>
                       {
                         this.props.book.map((cell,idx) => {                            

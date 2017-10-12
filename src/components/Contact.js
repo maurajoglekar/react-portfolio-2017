@@ -5,7 +5,7 @@ import './App.css';
 const Contact = createReactClass({
     sendEmail: function(e) {
         alert('Need to implement sending contact email!')
-    },    
+     },    
     render: function() {
         return (
                 <div className="container text-center">
@@ -16,19 +16,22 @@ const Contact = createReactClass({
                     <div className="form-group">
                       <label className="control-label col-sm-2" for="pwd">Name</label>
                       <div className="col-sm-10">          
-                      <input type="text" className="form-control" id="pwd" placeholder="Enter name" name="name" required></input>
+                      <input  ref={(el) => this._name = el}
+                            type="text" className="form-control" id="pwd" placeholder="Enter name" name="name" required></input>
                       </div>
                     </div>
                     <div className="form-group">
                       <label className="control-label col-sm-2" for="email">Email</label>
                       <div className="col-sm-10">
-                      <input type="email" className="form-control" id="email" placeholder="Enter email" name="email" required></input>
+                      <input ref={(el) => this._email = el} 
+                              type="email" className="form-control" id="email" placeholder="Enter email" name="email" required></input>
                       </div>
                     </div>
                     <div className="form-group">
                       <label className="control-label col-sm-2" for="pwd">Message</label>
                       <div className="col-sm-10">          
-                      <textarea className="form-control" id="message" name="message" required></textarea>
+                      <textarea ref={(el) => this._message = el} 
+                              className="form-control" id="message" name="message" required></textarea>
                       </div>
                     </div>
                     <div className="form-group">        

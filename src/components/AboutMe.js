@@ -1,6 +1,6 @@
 import React from 'react';
 import parral from './images/parral.jpg'
-import maura from './images/maura.jpg'
+import maura from './images/maura3.png'
 import gj from './images/grandJunction.jpg'
 import stanford from './images/stanford.jpg'
 import oracle from './images/oracle.jpg'
@@ -41,28 +41,28 @@ const AboutMe = () => ({
                   <div className="item active">
                   <img src={parral} alt="Chihuahua Mexico" width="100%" />
                     <div className="carousel-caption">
-                      <h2>I was born in Chihuahua, Mexico and lived there until the age of 12.</h2>
+                      <h3>I was born in Chihuahua, Mexico and lived there until the age of 12.</h3>
                     </div>
                   </div>
 
                   <div className="item">
                     <img src={gj} alt="Grand Junction Colorado" width="100%" />
                     <div className="carousel-caption">
-                      <h2>I lived and studied in Grand Junction Colorado.</h2>
+                      <h3>I lived and studied in Grand Junction Colorado.</h3>
                     </div>
                   </div>
 
                   <div className="item">
                     <img src={stanford} alt="Stanford University" width="100%" />
                     <div className="carousel-caption">
-                      <h2>Moved to California to attend Stanford University</h2>
+                      <h3>Moved to California to attend Stanford University</h3>
                     </div>
                   </div>
 
                   <div className="item">
                     <img src={oracle} alt="Oracle Corporation" width="100%" />
                     <div className="carousel-caption">
-                      <h2>Worked at Oracle for almost 20 years.</h2>
+                      <h3>Worked at Oracle for almost 20 years.</h3>
                     </div>
                   </div>
 
