@@ -17,7 +17,7 @@ const AboutMe = () => ({
         <div className="container-fluid text-center"> 
             <div className="container-fluid bg-1 text-center">
               <h3 className="margin padTitle">Who Am I?</h3>
-              <img src={maura} className="img-responsive img-circle margin padTitle" style={myPicStyle} alt="Maura" width="250" height="250"/>
+              <img src={maura} className="img-responsive thumbnail margin padTitle" style={myPicStyle} alt="Maura" width="250" height="250"/>
                <p className="whatPara">I'm an experienced full-stack developer with a passion for learning and applying technical skills in service to customers. </p>
             </div>
 
