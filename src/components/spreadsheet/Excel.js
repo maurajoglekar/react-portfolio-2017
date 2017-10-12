@@ -127,7 +127,7 @@ const Excel = createReactClass({
                       <div className="row">
                            <div className="col-sm-6"></div>
                            <div className="col-sm-2">
-                               <a className="btn btn-primary" onClick={this.toggleSearch}>Toggle Search</a>
+                               <a className="btn btn-primary" onClick={this.toggleSearch}>Search</a>
                            </div>
                            <div className="col-sm-2">
                                <a className="btn btn-primary" onClick={this.download.bind(this, 'json')} href="data.json">Export JSON</a>
