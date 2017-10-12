@@ -1,6 +1,6 @@
 import React from 'react';
 import parral from './images/parral.jpg'
-import maura from './images/maura3.png'
+import maura from './images/maura_now.png'
 import gj from './images/grandJunction.jpg'
 import stanford from './images/stanford.jpg'
 import oracle from './images/oracle.jpg'
