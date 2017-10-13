@@ -13,7 +13,6 @@ import GHSearchList from './github-search/GHSearchList'
 import GHSearchListContainer from './github-search/GHSearchListContainer'
 import GHSearchDetails from './github-search/GHSearchDetails'
 import AboutMe from './AboutMe'
-import Contact from './Contact'
 import Excel from './spreadsheet/Excel'
 
 const Main = () => (
@@ -32,7 +31,6 @@ const Main = () => (
       <Route exact path='/ghSearchList' component={GHSearchList}/>
       <Route path='/ghSearchDetails/:name' component={GHSearchDetails}/>
       <Route path='/aboutme' component={AboutMe}/>
-      <Route path='/contact' component={Contact}/>
       <Route path='/excel' component={Excel}/>
     </Switch>
   </main>

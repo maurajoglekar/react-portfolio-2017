@@ -23,8 +23,7 @@ var Header = createReactClass({
                     </div>
                     <div className="collapse navbar-collapse" id="myNavbar">
                       <ul className="nav navbar-nav" style={headerStyle}>
-                        <li><NavLink to='/aboutme' activeClassName="active">About</NavLink></li>
-                        <li><NavLink to='/contact' activeClassName="active">Contact</NavLink></li>
+                        <li><NavLink to='/aboutme' activeClassName="active">About Me</NavLink></li>
                       </ul>
                     </div>
                   </div>
