@@ -5,7 +5,6 @@ import sendgrid from 'sendgrid'
 
 const Contact = createReactClass({
     sendEmail: function(e) {
-
         var sg = sendgrid('1217_api_key_7474');
         var request = sg.emptyRequest({
           method: 'POST',
