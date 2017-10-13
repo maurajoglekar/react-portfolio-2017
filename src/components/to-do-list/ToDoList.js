@@ -40,7 +40,7 @@ const ToDoList = createReactClass({
                     <div className="input-group">
                       <input ref={(a) => this._inputElement = a} type="text" placeholder="Enter a task" required></input>
                       <div className="input-group-btn">
-                        <button type="button" className="btn btn-primary">add</button>
+                        <button type="submit" className="btn btn-primary">add</button>
                       </div>
                     </div>
                   </form>

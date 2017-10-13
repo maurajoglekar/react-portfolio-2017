@@ -41,14 +41,14 @@ const AboutMe = () => ({
                   <div className="item active">
                   <img src={parral} alt="Chihuahua Mexico" width="100%" />
                     <div className="carousel-caption">
-                      <h3>I was born in Chihuahua, Mexico and lived there until the age of 12.</h3>
+                      <h3>I was born in Chihuahua, Mexico and lived there until the age of 12</h3>
                     </div>
                   </div>
 
                   <div className="item">
                     <img src={gj} alt="Grand Junction Colorado" width="100%" />
                     <div className="carousel-caption">
-                      <h3>I lived and studied in Grand Junction Colorado.</h3>
+                      <h3>I lived and studied in Grand Junction Colorado</h3>
                     </div>
                   </div>
 
@@ -62,7 +62,7 @@ const AboutMe = () => ({
                   <div className="item">
                     <img src={oracle} alt="Oracle Corporation" width="100%" />
                     <div className="carousel-caption">
-                      <h3>Worked at Oracle for almost 20 years.</h3>
+                      <h3>Haved worked at Oracle for almost 20 years</h3>
                     </div>
                   </div>
 
