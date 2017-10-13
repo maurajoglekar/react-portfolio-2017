@@ -24,7 +24,6 @@ const Contact = createReactClass({
           console.log(response.body);
           console.log(response.headers);
         });
-        alert('Need to implement sending contact email!')
      },    
     render: function() {
         return (
