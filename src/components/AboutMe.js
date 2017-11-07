@@ -1,6 +1,6 @@
 import React from 'react';
 import parral from './images/parral.jpg'
-import maura from './images/maura_now.png'
+import maura from './images/maura.jpg'
 import gj from './images/grandJunction.jpg'
 import stanford from './images/stanford.jpg'
 import oracle from './images/oracle.jpg'
@@ -17,7 +17,7 @@ const AboutMe = () => ({
         <div className="container-fluid text-center"> 
             <div className="container-fluid bg-1 text-center">
               <h3 className="margin padTitle">Who Am I?</h3>
-              <img src={maura} className="img-responsive thumbnail margin padTitle" style={myPicStyle} alt="Maura" width="250" height="250"/>
+              <img src={maura} className="img-responsive img-circle margin padTitle" style={myPicStyle} alt="Maura" width="250" height="250"/>
                <p className="whatPara">I'm an experienced full-stack developer with a passion for learning and applying technical skills in service to customers. </p>
             </div>
 

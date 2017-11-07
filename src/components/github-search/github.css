@@ -94,6 +94,12 @@ searchButton:hover  {
   text-decoration: none;
 }
 
+.answerlist h3{ 
+  margin-top: 0;
+  color: #bd3613;
+  line-height: 110%;
+  margin-bottom: 5px;
+}
 .answerlist li:hover {
   background: #FDF6E3;
   opacity: 1;

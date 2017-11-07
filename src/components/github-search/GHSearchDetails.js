@@ -32,7 +32,7 @@ const GHSearchDetails = createReactClass({
                                 {
                                     this.state.issues.map(p => (
                                             <li className="answer cf">
-                                                 <input type="checkbox" checked={(p.state==='open')}></input>{p.title}
+                                                 <input type="checkbox" checked={(p.state==='closed')}></input>{p.title}
                                             </li>
                                     ))
                                 }
