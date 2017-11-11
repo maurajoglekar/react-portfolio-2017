@@ -7,6 +7,7 @@ import cars from './images/cars2.jpg'
 import postits from './images/postits3.jpg'
 import ghsearch from './images/ghSearch.png'
 import excel from './images/excel.jpg'
+import cine from './images/cine.jpg'
 
 import './App.css'
 
@@ -66,6 +67,12 @@ const Home = () => (
           <div className="thumbnail">
             <h3>Create a To Do list</h3>
             <NavLink to='/todo'><img src={todolist} alt="To Do List" width="300" height="300" /></NavLink>        
+          </div>      
+        </div>
+         <div className="col-sm-4">
+          <div className="thumbnail">
+           <h3>Movie Critic</h3>
+            <NavLink to='/cine'><img src={cine} alt="excel" width="300" height="300" /></NavLink>        
           </div>      
         </div>
       </div>
