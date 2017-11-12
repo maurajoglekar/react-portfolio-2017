@@ -14,7 +14,7 @@ import GHSearchListContainer from './github-search/GHSearchListContainer'
 import GHSearchDetails from './github-search/GHSearchDetails'
 import AboutMe from './AboutMe'
 import Excel from './spreadsheet/Excel'
-import Cine from './cine-critic/Cine'
+import Cinepad from './cine-critic/Cinepad'
 
 const Main = () => (
   <main className="content">
@@ -33,7 +33,7 @@ const Main = () => (
       <Route path='/ghSearchDetails/:name' component={GHSearchDetails}/>
       <Route path='/aboutme' component={AboutMe}/>
       <Route path='/excel' component={Excel}/>
-      <Route path='/cine' component={Cine}/>
+      <Route path='/cine' component={Cinepad}/>
     </Switch>
   </main>
 )

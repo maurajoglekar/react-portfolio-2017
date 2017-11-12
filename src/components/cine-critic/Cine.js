@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import createReactClass from 'create-react-class';
 import './css/Button.css'
 import './css/Suggest.css'
@@ -15,69 +15,48 @@ import FormInput from './FormInput';
 import Form from './Form';
 import Actions from './Actions'
 import Dialog from './Dialog'
+import Excel from './Excel'
+import PropTypes from 'prop-types';
 
-const Cine = createReactClass({
-        getInitialState: function() {
-            return {
-            };
-        },
-        componentDidMount() {
-        },
-        addReview: function() {
-            alert('Add a review!')
-        },
-        render: function() {
-            var headers = localStorage.getItem('headers');
-            var data = localStorage.getItem('data');
+class Cine extends Component {
 
-            if (!headers) {
-              headers = ['Title', 'Year', 'Rating', 'Comments'];
-              data = [['Big Sick', '2017', '4', 'Great date movie']];
-            }
-            return (
-                <div>
-                <div className="jumbotron cine-header">
-                  <div className="container text-center">
-                  <h1><Logo />  Welcome to Cine Critic!</h1>
-                  <h2> Your Personal Movie Reviews</h2>
-                  </div>
-                </div>
- 
-                  <div className="page-header">
-                      <div className="row">
-                           <div className="col-sm-1"></div>
-                           <div className="col-sm-2">
-                               <a className="btn btn-primary" onClick={this.addReview}>Add</a>
-                           </div>
-                       </div>
-                <h2>Suggest</h2>
-                <div><Suggest options={['eenie', 'meenie', 'miney', 'mo']} /></div>
-                </div>
-      
-                <div className="container-fluid">
-                  <table className="table table-striped table-bordered">
-                    <thead>
-                      <tr>
-                      {
-                        headers.map((title, idx) => (
-                            <th key={idx}>{title}</th>))
-                      }
-                      </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            data.map((movie, i) => (
-                                    <Movie key={i}
-                                        rowidx={i}
-                                        movie={movie}></Movie> 
-                                   ))
-                        }
-                    </tbody>
-                  </table>
-                  </div>
-                </div>
-            );
-        }
-    });
+    constructor(props) {
+         super(props);
+         this.state = {
+           data: props.initialData,
+           addnew: false,
+         };
+         this.preSearchData = null;
+    }
+
+    commitToStorage(data) {
+      localStorage.setItem('data', JSON.stringify(data));
+    }
+
+    onExcelDataChange(data) {
+        this.setState({data: data});
+        this.commitToStorage(data);
+    }
+    
+    render() {
+        return (
+            <div>
+                <Excel 
+                    schema={this.props.schema}
+                    initialData={this.state.data}
+                    onDataChange={this.onExcelDataChange.bind(this)} />
+            </div>
+        );
+    }
+}
+
+Cine.propTypes = {
+  schema: PropTypes.arrayOf(
+    PropTypes.object
+  ),
+  initialData: PropTypes.arrayOf(
+    PropTypes.object
+  )    
+}
 
 export default Cine
