@@ -7,7 +7,6 @@ import './css/FormInput.css'
 import './css/Actions.css'
 import './css/Dialog.css'
 import Logo from './Logo'
-import Movie from './Movie'
 import Button from './Button';
 import Suggest from './Suggest';
 import Rating from './Rating';

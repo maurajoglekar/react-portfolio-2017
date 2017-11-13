@@ -6,8 +6,8 @@ import './css/Rating.css'
 import './css/FormInput.css'
 import './css/Actions.css'
 import './css/Dialog.css'
+import './css/Cine.css'
 import Logo from './Logo'
-import Movie from './Movie'
 import Button from './Button';
 import Suggest from './Suggest';
 import Rating from './Rating';
@@ -30,7 +30,7 @@ if (!data) {
 const Cinepad = createReactClass({
         render: function() {
             return (
-                <div>
+                <div className="Cinepad">
                     <div className="jumbotron cine-header">
                       <div className="container text-center">
                       <h1><Logo />  Welcome to Cine Critic!</h1>

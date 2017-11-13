@@ -6,7 +6,6 @@ import Rating from './Rating';
 import React, {Component} from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Movie from './Movie'
 
 class Excel extends Component {
 
