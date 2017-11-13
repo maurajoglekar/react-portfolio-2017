@@ -6,6 +6,7 @@ import Rating from './Rating';
 import React, {Component} from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+//import './css/Excel.css'
 
 class Excel extends Component {
 
@@ -22,6 +23,10 @@ class Excel extends Component {
   
   componentWillReceiveProps(nextProps) {
     this.setState({data: nextProps.initialData});
+  }
+
+  actionClick(rowidx, action) {
+    this.setState({dialog: {type: action, idx: rowidx}});
   }
     
   render() {
@@ -46,37 +51,40 @@ class Excel extends Component {
               return (<th key={idx}>{title}</th>);
             }, this)
           }
-          </tr>
-        </thead>
-        <tbody> 
-          {
-          this.state.data.map((row, rowidx) => {
-            return (
-              <tr key={rowidx}>{
-                Object.keys(row).map((cell, idx) => {
-                  const schema = this.props.schema[idx];
-                  if (!schema || !schema.show) {
-                    return null;
-                  }
-                  const isRating = schema.type === 'rating';
-                  const edit = this.state.edit;
-                  let content = row[cell];
-                  if (isRating) {
-                    content = <Rating readonly={true} defaultValue={Number(content)} />;
-                  }
-                  return (
-                    <td 
-                      key={idx}
-                      data-row={rowidx}
-                      data-key={schema.id}>
-                      {content}
-                    </td>
-                  );
-                }, this)}
+              <th className="ExcelNotSortable">Actions</th>
               </tr>
-            );
-          }, this) 
-          }
+            </thead>
+        <tbody> 
+            {this.state.data.map((row, rowidx) => {
+                return (
+                  <tr key={rowidx}>{
+                    Object.keys(row).map((cell, idx) => {
+                      const schema = this.props.schema[idx];
+                      if (!schema || !schema.show) {
+                        return null;
+                      }
+                      const isRating = schema.type === 'rating';
+                      const edit = this.state.edit;
+                      let content = row[cell];
+                      if (isRating) {
+                        content = <Rating readonly={true} defaultValue={Number(content)} />;
+                      }
+                      return (
+                        <td 
+                          key={idx}
+                          data-row={rowidx}
+                          data-key={schema.id}>
+                          {content}
+                        </td>
+                      );
+                    }, this)}
+                    <td className="ExcelDataCenter">
+                      <Actions onAction={this.actionClick.bind(this, rowidx)}/>
+                    </td>
+                  </tr>
+                );
+            }, this)
+            }
         </tbody>
       </table>
       </div>

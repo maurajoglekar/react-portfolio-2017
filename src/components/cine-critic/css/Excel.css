@@ -1,4 +1,4 @@
-.Excel input {
+/*.Excel input {
   font: 16px Arial;
 }
 
@@ -30,17 +30,17 @@
 
 .Excel .ExcelEditable:hover {
   background: #FBFBFB;
-}
+}*/
 
 .Excel .ExcelDataCenter {
   text-align: center;
 }
 
-.Excel .ExcelDataLeft {
+/*.Excel .ExcelDataLeft {
   padding: 0 10px;
   text-align: left;
 }
 
 .Excel .ExcelDataRight {
   text-align: right;
-}
+}*/
