@@ -29,23 +29,23 @@ const Home = () => (
         </div>
          <div className="col-sm-4">
           <div className="thumbnail">
-           <h3>Excel application</h3>
-            <NavLink to='/excel'><img src={excel} alt="excel" width="300" height="300" /></NavLink>        
+           <h3>Review Movies</h3>
+            <NavLink to='/cine'><img src={cine} alt="excel" width="300" height="300" /></NavLink>        
           </div>      
         </div>
-        <div className="col-sm-4">
+         <div className="col-sm-4">
           <div className="thumbnail">
-            <h3>Post-Its Board</h3>
-            <NavLink to='/bb'><img src={postits} alt="Post-Its Board" width="300" height="300" /></NavLink>        
+           <h3>Excel application</h3>
+            <NavLink to='/excel'><img src={excel} alt="excel" width="300" height="300" /></NavLink>        
           </div>      
         </div>
       </div>
       
       <div className="row">
-         <div className="col-sm-4">
+        <div className="col-sm-4">
           <div className="thumbnail">
-           <h3>Create colors and star rate them</h3>
-            <NavLink to='/colorfactory'><img src={rateColor} alt="color factory" width="300" height="300" /></NavLink>        
+            <h3>Post-Its Board</h3>
+            <NavLink to='/bb'><img src={postits} alt="Post-Its Board" width="300" height="300" /></NavLink>        
           </div>      
         </div>
         <div className="col-sm-4">
@@ -71,8 +71,8 @@ const Home = () => (
         </div>
          <div className="col-sm-4">
           <div className="thumbnail">
-           <h3>Review Movies</h3>
-            <NavLink to='/cine'><img src={cine} alt="excel" width="300" height="300" /></NavLink>        
+           <h3>Create colors and star rate them</h3>
+            <NavLink to='/colorfactory'><img src={rateColor} alt="color factory" width="300" height="300" /></NavLink>        
           </div>      
         </div>
       </div>
