@@ -1,18 +1,13 @@
 import React, {Component} from 'react';
-import createReactClass from 'create-react-class';
 import './css/Button.css'
 import './css/Suggest.css'
 import './css/Rating.css'
 import './css/FormInput.css'
 import './css/Actions.css'
 import './css/Dialog.css'
-import Logo from './Logo'
+import './css/Cine.css'
 import Button from './Button';
-import Suggest from './Suggest';
-import Rating from './Rating';
-import FormInput from './FormInput';
 import Form from './Form';
-import Actions from './Actions'
 import Dialog from './Dialog'
 import Excel from './Excel'
 import PropTypes from 'prop-types';
@@ -27,9 +22,27 @@ class Cine extends Component {
          };
          this.preSearchData = null;
     }
+    
+    addNewDialog() {
+        this.setState({addnew: true});
+    }
+
+    addNew(action) {
+        if (action === 'dismiss') {
+          this.setState({addnew: false});
+          return;
+        }
+        let data = Array.from(this.state.data);
+        data.unshift(this.refs.form.getData());
+        this.setState({
+          addnew: false,
+          data: data,
+        });
+        this.commitToStorage(data);
+    }
 
     commitToStorage(data) {
-      localStorage.setItem('data', JSON.stringify(data));
+      localStorage.setItem('cinedata', JSON.stringify(data));
     }
 
     onExcelDataChange(data) {
@@ -39,12 +52,37 @@ class Cine extends Component {
     
     render() {
         return (
-            <div>
+            <div className="Cinepad datagrid">
+                 <div className="page-header">
+                      <div className="row">
+                           <div className="col-sm-2">                               
+                                <Button 
+                                  onClick={this.addNewDialog.bind(this)}
+                                  className="toolbarAddButton">
+                                  + Add
+                                </Button>
+                           </div>
+                       </div>
+                </div>
+
                 <Excel 
                     schema={this.props.schema}
                     initialData={this.state.data}
                     onDataChange={this.onExcelDataChange.bind(this)} />
+                {this.state.addnew
+                  ? <Dialog 
+                      modal={true}
+                      header="Add new item"
+                      confirmLabel="Add"
+                      onAction={this.addNew.bind(this)}
+                    >
+                      <Form
+                        ref="form"
+                        fields={this.props.schema} />
+                    </Dialog>
+                  : null}
             </div>
+            
         );
     }
 }

@@ -8,13 +8,6 @@ import './css/Actions.css'
 import './css/Dialog.css'
 import './css/Cine.css'
 import Logo from './Logo'
-import Button from './Button';
-import Suggest from './Suggest';
-import Rating from './Rating';
-import FormInput from './FormInput';
-import Form from './Form';
-import Actions from './Actions'
-import Dialog from './Dialog'
 import Cine from './Cine'
 import schema from './schema';
 

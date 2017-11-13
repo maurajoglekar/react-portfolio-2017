@@ -8,4 +8,11 @@
     background-color: gold;
 }
 
+.Cinepad .datagrid{
+    margin: 40px;
+}
+
+.toolbarAddButton {
+  font-size: 32px;
+}
 

@@ -6,7 +6,6 @@ import Rating from './Rating';
 import React, {Component} from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-//import './css/Excel.css'
 
 class Excel extends Component {
 
@@ -28,13 +27,134 @@ class Excel extends Component {
   actionClick(rowidx, action) {
     this.setState({dialog: {type: action, idx: rowidx}});
   }
-    
+  
+  fireDataChange(data) {
+    this.props.onDataChange(data);
+  }
+  
+  sort(key) {
+    let data = Array.from(this.state.data);
+    const descending = this.state.sortby === key && !this.state.descending;
+    data.sort((a, b) =>
+      descending 
+        ? (a[key] < b[key] ? 1 : -1)
+        : (a[key] > b[key] ? 1 : -1)
+    );
+    this.setState({
+      data: data,
+      sortby: key,
+      descending: descending,
+    });
+    this.fireDataChange(data);
+  }
+  
+  showEditor(e) {
+    this.setState({edit: {
+      row: parseInt(e.target.dataset.row, 10),
+      key: e.target.dataset.key,
+    }});
+  }
+  
+  save(e) {
+    e.preventDefault();
+    const value = this.refs.input.getValue();
+    let data = Array.from(this.state.data);
+    data[this.state.edit.row][this.state.edit.key] = value;
+    this.setState({
+      edit: null,
+      data: data,
+    });
+    this.fireDataChange(data);
+  }
+   
+  deleteConfirmationClick(action) {
+    if (action === 'dismiss') {
+      this.closeDialog();
+      return;
+    }
+    let data = Array.from(this.state.data);
+    data.splice(this.state.dialog.idx, 1);
+    this.setState({
+      dialog: null,
+      data: data,
+    });
+    this.fireDataChange(data);
+  }
+  
+  closeDialog() {
+    this.setState({dialog: null});
+  }
+  
+  saveDataDialog(action) {
+    if (action === 'dismiss') {
+      this.closeDialog();
+      return;
+    }
+    let data = Array.from(this.state.data);
+    data[this.state.dialog.idx] = this.refs.form.getData();
+    this.setState({
+      dialog: null,
+      data: data,
+    });
+    this.fireDataChange(data);
+  }
+  
   render() {
     return (
       <div className="Excel">
         {this.renderTable()}
+        {this.renderDialog()}
       </div>
     );
+  }
+
+  renderDialog() {
+    if (!this.state.dialog) {
+      return null;
+    }
+    switch (this.state.dialog.type) {
+      case 'delete':
+        return this.renderDeleteDialog();
+      case 'info':
+        return this.renderFormDialog(true);
+      case 'edit':
+        return this.renderFormDialog();
+      default:
+        throw Error(`Unexpected dialog type ${this.state.dialog.type}`);
+    }
+  }
+  
+  renderDeleteDialog() {
+    const first = this.state.data[this.state.dialog.idx];
+    const nameguess = first[Object.keys(first)[0]];
+    return (
+      <Dialog 
+        modal={true}
+        header="Confirm deletion"
+        confirmLabel="Delete"
+        onAction={this.deleteConfirmationClick.bind(this)}
+      >
+        {`Are you sure you want to delete "${nameguess}"?`}
+      </Dialog>
+    );
+  }
+  
+  renderFormDialog(readonly) {
+    return (
+      <Dialog 
+        modal={true}
+        header={readonly ? 'Item info' : 'Edit item'}
+        confirmLabel={readonly ? 'ok' : 'Save'}
+        hasCancel={!readonly}
+        onAction={this.saveDataDialog.bind(this)}
+      >
+        <Form
+          ref="form"
+          fields={this.props.schema}
+          initialData={this.state.data[this.state.dialog.idx]}
+          readonly={readonly} />
+      </Dialog>
+    ); 
   }
   
   renderTable() {

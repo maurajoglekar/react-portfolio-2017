@@ -71,7 +71,7 @@ const Home = () => (
         </div>
          <div className="col-sm-4">
           <div className="thumbnail">
-           <h3>Movie Critic</h3>
+           <h3>Review Movies</h3>
             <NavLink to='/cine'><img src={cine} alt="excel" width="300" height="300" /></NavLink>        
           </div>      
         </div>
