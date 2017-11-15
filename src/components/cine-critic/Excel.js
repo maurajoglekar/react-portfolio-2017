@@ -1,10 +1,8 @@
 import Actions from './Actions';
 import Dialog from './Dialog';
 import Form from './Form';
-import FormInput from './FormInput';
 import Rating from './Rating';
 import React, {Component} from 'react';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 class Excel extends Component {
@@ -33,6 +31,7 @@ class Excel extends Component {
   }
   
   sort(key) {
+    if (this) {
     let data = Array.from(this.state.data);
     const descending = this.state.sortby === key && !this.state.descending;
     data.sort((a, b) =>
@@ -46,6 +45,7 @@ class Excel extends Component {
       descending: descending,
     });
     this.fireDataChange(data);
+    }
   }
   
   showEditor(e) {
@@ -161,52 +161,62 @@ class Excel extends Component {
     return (
        <div className="container-fluid">
           <table className="table table-striped table-bordered">
-            <thead>
+            <thead  onClick={this.sort}>
               <tr>{
                 this.props.schema.map((item, idx) => {
                   if (!item.show) {
                     return null;
-                  }
+                  };
                   let title = item.label;
-              return (<th key={idx}>{title}</th>);
-            }, this)
-          }
+                  if (this.state.sortby === item.id) {
+                    title += this.state.descending ? ' \u2191' : ' \u2193';
+                  }
+                  return (
+                    <th                      
+                      key={item.id}
+                      onClick={this.sort.bind(this, item.id)}
+                    >
+                      {title}
+                    </th>
+                  );
+                }, this)
+              }
               <th className="ExcelNotSortable">Actions</th>
               </tr>
             </thead>
-        <tbody> 
-            {this.state.data.map((row, rowidx) => {
-                return (
-                  <tr key={rowidx}>{
-                    Object.keys(row).map((cell, idx) => {
-                      const schema = this.props.schema[idx];
-                      if (!schema || !schema.show) {
-                        return null;
-                      }
-                      const isRating = schema.type === 'rating';
-                      const edit = this.state.edit;
-                      let content = row[cell];
-                      if (isRating) {
-                        content = <Rating readonly={true} defaultValue={Number(content)} />;
-                      }
-                      return (
-                        <td 
-                          key={idx}
-                          data-row={rowidx}
-                          data-key={schema.id}>
-                          {content}
+            <tbody> 
+                {this.state.data.map((row, rowidx) => {
+                    return (
+                      <tr key={rowidx}>{
+                        Object.keys(row).map((cell, idx) => {
+                          const schema = this.props.schema[idx];
+                          if (!schema || !schema.show) {
+                            return null;
+                          }
+                          const isRating = schema.type === 'rating';
+                          const edit = this.state.edit;
+                          let content = row[cell];
+                          if (isRating) {
+                            content = <Rating readonly={true} defaultValue={Number(content)} />;
+                          }
+                          return (
+                            <td 
+                              key={idx}
+                              data-row={rowidx}
+                              data-key={schema.id}>
+                              {content}
+                            </td>
+                          );
+                        }, this)}
+                        <td className="ExcelDataCenter">
+                          <Actions onAction={this.actionClick.bind(this, rowidx)}/>
                         </td>
-                      );
-                    }, this)}
-                    <td className="ExcelDataCenter">
-                      <Actions onAction={this.actionClick.bind(this, rowidx)}/>
-                    </td>
-                  </tr>
-                );
-            }, this)
-            }
-        </tbody>
-      </table>
+                      </tr>
+                    );
+                }, this)
+                }
+            </tbody>
+          </table>
       </div>
     );
   }
