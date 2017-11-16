@@ -8,7 +8,7 @@ const Actions = props =>
       tabIndex="0"
       className="ActionsInfo"
       title="More info"
-      onClick={props.onAction.bind(null, 'info')}>&#8505;</span>
+      onClick={props.onAction.bind(null, 'info')}>&#x2139;</span>
     <span 
       tabIndex="0" 
       className="ActionsEdit" 
