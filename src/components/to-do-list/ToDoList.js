@@ -5,8 +5,12 @@ import './ToDoList.css'
  
 const ToDoList = createReactClass({
       getInitialState: function() {
+        var todos = JSON.parse(localStorage.getItem('todoData'))
+        if (!todos) {
+            todos = [];
+        }
         return {
-          tasks: []
+          tasks: todos
         };
       },
       addItem: function(e) {
@@ -24,13 +28,15 @@ const ToDoList = createReactClass({
             tasks: itemArray
           });
 
+          localStorage.setItem('todoData', JSON.stringify(itemArray));
           this._inputElement.value = "";
           
           e.preventDefault();
       },
       remove(id) {
             var tasks = this.state.tasks.filter(task => task.key !== id)
-            this.setState({tasks})
+            this.setState({tasks});
+            localStorage.setItem('todoData', JSON.stringify(tasks));
         },
          render: function() {
           return (

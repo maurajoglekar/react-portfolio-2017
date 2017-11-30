@@ -4,20 +4,13 @@ import Note from './Note'
 import './Board.css'
 
 var Board = createReactClass({
-            propTypes: {
-                count: function(props, propName) {
-                    if(typeof props[propName] !== "number") {
-                        return new Error("the count must be a number")
-                    } 
-
-                    if(props[propName] > 100) {
-                        return new Error('Creating ' + props[propName] + ' notes is ridiculous')
-                    }
-                }
-            },
             getInitialState() {
+                var postits = JSON.parse(localStorage.getItem('postsData'))
+                if (!postits) {
+                    postits = [];
+                }
                 return {
-                    notes: []
+                    notes: postits
                 }
             },
             componentWillMount() {
@@ -35,8 +28,7 @@ var Board = createReactClass({
                 }
             },
             nextId() {
-                this.uniqueId = this.uniqueId || 0
-                return this.uniqueId++
+                return Date.now()
             },
             add(text) {
                 var notes = [
@@ -47,10 +39,12 @@ var Board = createReactClass({
                     }
                 ]
                 this.setState({notes})
+                localStorage.setItem('postsData', JSON.stringify(notes));
             },
             clear() {
                 var notes = []
-                this.setState({notes})  
+                this.setState({notes});
+                localStorage.setItem('postsData', JSON.stringify(notes));
             },
             update(newText, id) {
                 var notes = this.state.notes.map(
@@ -61,11 +55,13 @@ var Board = createReactClass({
                             note: newText
                         }
                     )
-                this.setState({notes})
+                this.setState({notes});
+                localStorage.setItem('postsData', JSON.stringify(notes));
             },
             remove(id) {
                 var notes = this.state.notes.filter(note => note.id !== id)
                 this.setState({notes})
+                localStorage.setItem('postsData', JSON.stringify(notes));
             },
             eachNote(note) {
                 return (<Note key={note.id}
