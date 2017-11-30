@@ -6,7 +6,7 @@ import './Cars.css'
 
 const Cars = () => (
   <div className='pure-menu'>
-    <div className="jumbotron">
+    <div className="jumbotron autoHeader">
       <div className="container text-center">
         <h1>Online Automobile Store</h1>      
         <p>Best Cars in Town</p>

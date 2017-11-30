@@ -14,7 +14,7 @@ const AboutMe = () => ({
           };
 
     return (
-        <div className="container-fluid text-center"> 
+        <div className="text-center"> 
             <div className="container-fluid bg-1 text-center">
               <h3 className="margin padTitle">Who Am I?</h3>
               <img src={maura} className="img-responsive img-circle margin padTitle" style={myPicStyle} alt="Maura" width="250" height="250"/>

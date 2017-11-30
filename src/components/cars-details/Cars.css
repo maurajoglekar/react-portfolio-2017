@@ -1,5 +1,10 @@
 /* Car List Styles */
 
+.autoHeader {
+    background: #337ab7;
+    color: white;
+}
+
 .button {
     display: inline-block;
     padding: 6px 12px;

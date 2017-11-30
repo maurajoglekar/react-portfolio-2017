@@ -12,20 +12,25 @@ import cine from './images/cine.jpg'
 import './App.css'
 
 const Home = () => (
-    <div className="container-fluid text-center"> 
-        <div className="jumbotron">
+    <div className="text-center"> 
+        <div className="jumbotron homeHeader">
           <div className="container text-center">
             <h1>Maura's Portfolio</h1>      
             <p>UI Developer with a passion for ReactJS</p>
           </div>
         </div>
-      
-        <div className="row">
+
+        <div className="row container-fluid ">
         <div className="col-sm-4">
           <div className="thumbnail">
-            <h3>Git Hub Search</h3>
+            <div className="mycontainer">
+               <h3>Git Hub Search</h3>
+               <div className="overlay">
+                <div className="text">Uses git REST API to query</div>
+              </div>
+            </div>
             <NavLink to='/ghSearchBox'><img src={ghsearch} alt="GitHub Search" width="300" height="300" /></NavLink>        
-          </div>      
+          </div> 
         </div>
          <div className="col-sm-4">
           <div className="thumbnail">
@@ -41,7 +46,7 @@ const Home = () => (
         </div>
       </div>
       
-      <div className="row">
+      <div className="row container-fluid ">
         <div className="col-sm-4">
           <div className="thumbnail">
             <h3>Post-Its Board</h3>
@@ -62,7 +67,7 @@ const Home = () => (
        </div>
       </div>
 
-      <div className="row">
+      <div className="row container-fluid">
          <div className="col-sm-4">
           <div className="thumbnail">
             <h3>Create a To Do list</h3>

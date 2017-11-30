@@ -32,7 +32,7 @@ a:link {
         padding-bottom: 70px;
   }
   .bg-2 { 
-      background-color: #C0C0C0; /* gray */
+      background-color: #FFF8DC; /* cream */
       color: black;
         padding-top: 50px;
         padding-bottom: 70px;
@@ -64,4 +64,39 @@ a:link {
    .cine-header {
       background-color: gold; 
    }
-   
+
+.homeHeader{
+    background-color: #663399;
+    color: white;
+}
+
+.mycontainer {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: -23px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 500%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #FFF8DC;
+}
+
+.mycontainer:hover .overlay {
+  opacity: 1; 
+}
+
+.text {
+  color: #663399;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+} 
