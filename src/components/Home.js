@@ -26,7 +26,7 @@ const Home = () => (
             <div className="mycontainer">
                <h3>Git Hub Search</h3>
                <div className="overlay col-sm-4">
-                <div className="text">A hacker rank rest that allows the user to search for repos using the Github Search API. </div>
+                <div className="text">A hacker rank test that allows the user to search for repos using the Github Search API. </div>
               </div>
             </div>
             <NavLink to='/ghSearchBox'><img src={ghsearch} alt="GitHub Search" width="300" height="300" /></NavLink>        
