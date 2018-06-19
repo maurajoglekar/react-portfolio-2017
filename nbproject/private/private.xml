@@ -3,7 +3,45 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/reactApps/react_spa/src/components/github-search/GHSearchList.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/color-organizer/StarRating.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/cars-details/CarsDetails.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/to-do-list/ToDoList.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/Home.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/spreadsheet/SearchRow.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/to-do-list/ToDoList.css</file>
+            <file>file:/C:/reactApps/react_spa/src/components/App.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/bb/Note.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/spreadsheet/BooksAPI.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/cars-details/CarsAPI.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/color-organizer/stylesheets/AddColorForm.css</file>
+            <file>file:/C:/reactApps/react_spa/src/components/to-do-list/ToDoItems.js</file>
             <file>file:/C:/reactApps/react_spa/src/components/github-search/github.css</file>
+            <file>file:/C:/reactApps/react_spa/src/components/AboutMe.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/App.css</file>
+            <file>file:/C:/reactApps/react_spa/src/components/color-organizer/ColorFactory.js</file>
+            <file>file:/C:/reactApps/react_spa/public/index.html</file>
+            <file>file:/C:/reactApps/react_spa/src/components/cars-details/Cars.css</file>
+            <file>file:/C:/reactApps/react_spa/src/components/color-organizer/ColorList.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/spreadsheet/Book.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/color-organizer/Color.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/colorizer/Colorizer.css</file>
+            <file>file:/C:/reactApps/react_spa/src/components/github-search/GHSearchBox.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/Header.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/counter/Counter.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/color-organizer/AddColorForm.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/github-search/GHSearchDetails.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/bb/Board.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/color-organizer/Star.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/spreadsheet/Excel.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/counter/CounterParent.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/color-organizer/stylesheets/Color.css</file>
+            <file>file:/C:/reactApps/react_spa/src/components/colorizer/Colorizer.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/cars-details/Cars.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/color-organizer/stylesheets/ColorList.css</file>
+            <file>file:/C:/reactApps/react_spa/src/components/Main.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/github-search/GHSearchListContainer.js</file>
+            <file>file:/C:/reactApps/react_spa/src/components/bb/Board.css</file>
         </group>
     </open-files>
 </project-private>

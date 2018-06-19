@@ -115,17 +115,6 @@ const Home = () => (
            <NavLink to='/colorizer'><img src={color2} alt="colorizer" width="300" height="300" /></NavLink>
           </div>      
        </div>
-        <div className="col-sm-4">
-          <div className="thumbnail">
-            <div className="mycontainer">
-               <h3>Vacation Tracker</h3>
-               <div className="overlay">
-                <div className="text">track vacation days </div>
-              </div>
-            </div>
-           <NavLink to='/vacay'><img src={color2} alt="colorizer" width="300" height="300" /></NavLink>
-          </div>      
-       </div>
       </div>
 
     </div>
