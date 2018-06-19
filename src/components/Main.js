@@ -15,6 +15,10 @@ import GHSearchDetails from './github-search/GHSearchDetails'
 import AboutMe from './AboutMe'
 import Excel from './spreadsheet/Excel'
 import Cinepad from './cine-critic/Cinepad'
+import VacayMenu from './activityTracker/VacayMenu'
+import VacayCount from './activityTracker/VacayCount'
+import VacayAddForm from './activityTracker/VacayAddForm'
+import VacayList from './activityTracker/VacayList'
 
 const Main = () => (
   <main className="content">
@@ -34,6 +38,7 @@ const Main = () => (
       <Route path='/aboutme' component={AboutMe}/>
       <Route path='/excel' component={Excel}/>
       <Route path='/cine' component={Cinepad}/>
+      <Route path='/vacay' component={VacayMenu}/>
     </Switch>
   </main>
 )

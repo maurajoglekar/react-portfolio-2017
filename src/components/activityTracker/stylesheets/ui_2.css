@@ -1,0 +1,69 @@
+.trackerBody {
+  width: 600px;
+  height: 700px;
+  background: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img(27).jpg")no-repeat center center;
+}
+
+.tracker {
+  background: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img(27).jpg") no-repeat center center;
+  padding-top: 800px;
+  margin-top: 60px;
+}
+
+#p.container {
+  background: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img(27).jpg") no-repeat center center;
+  padding: 700px 0px 0px 0px;
+  margin-top: 60px;
+}
+
+
+.trackerBad {
+  background-image:  url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img(27).jpg") repeat center center;
+  padding-top: 800px;
+  margin-top: 50px;
+}
+
+div.ski-day-count {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 3em;
+  height: calc(100% - 3em);
+}
+div.ski-day-count > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.ski-day-count > div.total-days {
+  flex-basis: 100%;
+  font-size: 2em;
+}
+div.ski-day-count > div.total-days span, div.ski-day-count > div.total-days svg {
+  height: 200px;
+}
+div.ski-day-count > div:not(.total-days) {
+  flex-basis: 50%;
+}
+div.ski-day-count > div span, div.ski-day-count > div svg {
+  background-color: white;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.ski-day-count > div span:first-child, div.ski-day-count > div svg:first-child {
+  border-radius: 25px 0 0 25px;
+  padding-left: 15px;
+}
+div.ski-day-count > div span:last-child, div.ski-day-count > div svg:last-child {
+  border-radius: 0 25px 25px 0;
+  font-size: 0.5em;
+  padding-right: 15px;
+}
+
+.vacayContent {
+    background-color: white;
+}
+
+
+
