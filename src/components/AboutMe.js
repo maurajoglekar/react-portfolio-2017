@@ -62,7 +62,7 @@ const AboutMe = () => ({
                   <div className="item">
                     <img src={oracle} alt="Oracle Corporation" width="100%" />
                     <div className="carousel-caption">
-                      <h3>Haved worked at Oracle for almost 20 years</h3>
+                      <h3>Have worked at Oracle for almost 20 years</h3>
                     </div>
                   </div>
 
