@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 //merge the Button class name with any (if any) class names passed as properties
 const Button = props => 
   props.href
-    ? <a {...props} className={classNames('Button', props.className)}/>
+    ? <a {...props} className={classNames('Button', props.className)}> </a>
     : <button {...props} className={classNames('Button', props.className)}/>
 
 

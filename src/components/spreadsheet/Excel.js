@@ -67,6 +67,11 @@ const Excel = createReactClass({
           }
         },
         
+        getNewSearchData: function(data, needle) {
+          return data.filter((row, idx) => {
+            return row[idx].toString().toLowerCase().indexOf(needle) > -1;
+          });
+        },
         search: function(e) {
           var allSearchBoxes = e.target.parentNode.parentNode.children;
           var searchdata = this.preSearchData;
@@ -75,10 +80,7 @@ const Excel = createReactClass({
               if (!needle) {
                 continue;
               }
-              var newsearchdata = searchdata.filter(function(row) {
-                return row[idx].toString().toLowerCase().indexOf(needle) > -1;
-              });
-              searchdata = newsearchdata;
+              searchdata = this.getNewSearchData(searchdata, needle);
           }
           this.setState({books: searchdata});
         },

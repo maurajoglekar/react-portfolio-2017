@@ -194,7 +194,6 @@ class Excel extends Component {
                             return null;
                           }
                           const isRating = schema.type === 'rating';
-                          const edit = this.state.edit;
                           let content = row[cell];
                           if (isRating) {
                             content = <Rating readonly={true} defaultValue={Number(content)} />;
